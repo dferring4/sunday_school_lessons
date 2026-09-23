@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Jews Resist the Holy Spirit · Acts 6–7</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💥</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#000;
+  --yellow:#FFD83D;
+  --red:#E3262E;
+  --cyan:#1FA3E0;
+  --royal:#233A95;
+  --paper:#FFFFFF;
+  --display:"Bangers", Impact, "Arial Black", sans-serif;
+  --body:"Comic Neue", "Trebuchet MS", "Segoe UI", sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#000;color:var(--ink);font-family:var(--body);overflow:hidden}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:4px solid var(--cyan);outline-offset:3px}
+
+/* ---------- HOME ---------- */
+#home{
+  position:fixed;inset:0;display:flex;flex-direction:column;gap:1.4vh;
+  padding:max(1.6vh,env(safe-area-inset-top)) 1.6vw max(1.6vh,env(safe-area-inset-bottom));
+  background:
+    radial-gradient(circle, rgba(31,163,224,.18) 1.2px, transparent 1.6px) 0 0/9px 9px,
+    var(--paper);
+}
+.masthead{
+  position:relative;flex:0 0 auto;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:2vw;
+  border:5px solid var(--ink);padding:1.2vh 1.6vw;overflow:hidden;
+  background:
+    radial-gradient(circle, rgba(227,38,46,.35) 2px, transparent 2.6px) 0 0/12px 12px,
+    var(--yellow);
+}
+.masthead::before{ /* sunburst behind title */
+  content:"";position:absolute;inset:-60%;z-index:0;
+  background:repeating-conic-gradient(from 0deg at 50% 50%, rgba(255,255,255,.55) 0 6deg, transparent 6deg 18deg);
+}
+.masthead>*{position:relative;z-index:1}
+.issue{
+  background:var(--paper);border:4px solid var(--ink);padding:.6vh .9vw;text-align:center;
+  font-family:var(--display);line-height:.95;box-shadow:5px 5px 0 var(--ink);transform:rotate(-3deg);
+}
+.issue b{display:block;font-size:clamp(28px,4.2vw,72px);color:var(--red);font-weight:400}
+.issue span{font-size:clamp(12px,1.1vw,20px);letter-spacing:.04em}
+.mast-title{text-align:center}
+.mast-title h1{
+  font-family:var(--display);font-weight:400;line-height:.9;letter-spacing:.02em;
+  font-size:clamp(34px,5.6vw,108px);color:var(--red);
+  -webkit-text-stroke:3px var(--ink);paint-order:stroke fill;
+  text-shadow:5px 5px 0 var(--ink);
+}
+.mast-title p{font-size:clamp(14px,1.45vw,26px);margin-top:.6vh}
+.mast-tools{display:flex;flex-direction:column;gap:.8vh;align-items:stretch}
+.chip{
+  font-family:var(--display);font-size:clamp(14px,1.3vw,24px);letter-spacing:.04em;
+  background:var(--paper);border:3px solid var(--ink);padding:.5vh .9vw;box-shadow:4px 4px 0 var(--ink);
+}
+.chip:hover{background:var(--cyan);color:#fff}
+.chip:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
+
+.grid{
+  flex:1 1 auto;min-height:0;display:grid;gap:1.2vw;
+  grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(3,1fr);
+}
+.panel{
+  position:relative;overflow:hidden;border:5px solid var(--ink);background:#222;
+  box-shadow:6px 6px 0 var(--ink);text-align:left;transition:transform .12s ease, box-shadow .12s ease;
+}
+.panel:nth-child(odd){transform:rotate(-.6deg)}
+.panel:nth-child(even){transform:rotate(.5deg)}
+.panel:hover,.panel:focus-visible{transform:rotate(0) scale(1.04);box-shadow:10px 10px 0 var(--red);z-index:2}
+.panel:active{transform:scale(.98);box-shadow:3px 3px 0 var(--ink)}
+.panel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.panel .num{
+  position:absolute;top:6px;left:6px;width:clamp(34px,3.4vw,62px);aspect-ratio:1;display:grid;place-items:center;
+  background:var(--yellow);border:3px solid var(--ink);border-radius:50%;
+  font-family:var(--display);font-size:clamp(20px,2.1vw,40px);box-shadow:3px 3px 0 var(--ink);
+}
+.panel .label{
+  position:absolute;left:0;right:0;bottom:0;padding:.6vh .7vw .5vh;
+  background:var(--paper);border-top:4px solid var(--ink);
+  font-family:var(--display);font-size:clamp(16px,1.55vw,30px);line-height:1;letter-spacing:.02em;
+}
+.panel.bonus{background:
+  radial-gradient(circle, rgba(0,0,0,.18) 2px, transparent 2.6px) 0 0/11px 11px, var(--red);color:#fff}
+.panel.bonus.cyan{background:
+  radial-gradient(circle, rgba(0,0,0,.18) 2px, transparent 2.6px) 0 0/11px 11px, var(--cyan)}
+.panel.bonus .big{
+  position:absolute;inset:0 0 28% 0;display:grid;place-items:center;text-align:center;
+  font-family:var(--display);font-size:clamp(26px,3.3vw,64px);line-height:.95;
+  -webkit-text-stroke:2px var(--ink);paint-order:stroke fill;text-shadow:4px 4px 0 var(--ink);
+}
+.panel.bonus .label{color:var(--ink)}
+.home-foot{flex:0 0 auto;font-size:clamp(10px,.75vw,13px);text-align:center;color:#333}
+
+/* ---------- SLIDE STAGE ---------- */
+#viewer{
+  position:fixed;inset:0;display:none;place-items:center;
+  background:radial-gradient(circle, #1c1c1c 1.5px, transparent 2px) 0 0/10px 10px, #000;
+}
+#viewer.on{display:grid}
+.stage{
+  position:relative;container-type:size;overflow:hidden;
+  width:min(100vw, calc(100vh * 1672 / 941));
+  aspect-ratio:1672/941;background:#000;
+}
+.slide{position:absolute;inset:0;display:none}
+.slide.active{display:block}
+.slide .art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform-origin:var(--ox,50%) var(--oy,50%)}
+.slide.active .art{animation:push 1.1s cubic-bezier(.2,.7,.2,1) both}
+@keyframes push{from{transform:scale(calc(var(--s,1) * 1.06))}to{transform:scale(var(--s,1))}}
+
+.el{position:absolute;transition:opacity .25s ease, transform .25s cubic-bezier(.3,1.6,.5,1)}
+.el.hidden{opacity:0;transform:scale(.6) rotate(-4deg);pointer-events:none}
+.textoff .el{opacity:0!important;pointer-events:none}
+
+.cap{ /* yellow narrator caption: slide title */
+  background:var(--yellow);border:.28cqw solid var(--ink);box-shadow:.55cqw .55cqw 0 var(--ink);
+  padding:.7cqw 1.2cqw .5cqw;
+}
+.cap h2{font-family:var(--display);font-weight:400;font-size:3.6cqw;line-height:.95;letter-spacing:.03em}
+.cap .sub{font-family:var(--body);font-size:1.35cqw;margin-top:.35cqw}
+.cap.huge h2{font-size:5.4cqw;color:var(--red);-webkit-text-stroke:.18cqw var(--ink);paint-order:stroke fill;text-shadow:.35cqw .35cqw 0 var(--ink)}
+
+.verse{
+  background:var(--paper);border:.28cqw solid var(--ink);box-shadow:.55cqw .55cqw 0 var(--ink);
+  padding:1.5cqw 1.3cqw 1cqw;font-size:1.62cqw;line-height:1.28;
+}
+.verse .ref{
+  position:absolute;top:-1.5cqw;left:1cqw;background:var(--red);color:#fff;border:.22cqw solid var(--ink);
+  font-family:var(--display);font-size:1.5cqw;letter-spacing:.05em;padding:.15cqw .7cqw 0;transform:rotate(-2deg);
+}
+.verse.small{font-size:1.4cqw}
+
+.point{
+  background:var(--royal);color:#fff;border:.28cqw solid var(--ink);box-shadow:.55cqw .55cqw 0 var(--ink);
+  padding:.9cqw 1.2cqw;font-size:1.85cqw;line-height:1.22;
+}
+.point.big{font-family:var(--display);font-size:3.5cqw;line-height:1.02;letter-spacing:.02em;background:var(--red);padding:1.2cqw 1.5cqw}
+
+.tag{
+  position:relative;background:var(--yellow);border:.25cqw solid var(--ink);box-shadow:.4cqw .4cqw 0 var(--ink);
+  font-family:var(--display);font-size:2.3cqw;letter-spacing:.05em;padding:.3cqw .9cqw .05cqw;transform:rotate(-3deg);
+}
+.tag.hidden{transform:scale(.6) rotate(-10deg)}
+.tag small{display:block;font-family:var(--body);font-size:1.2cqw;letter-spacing:0;line-height:1.2;padding-bottom:.35cqw;max-width:18cqw}
+
+.bubble{ /* speech bubble with tail */
+  background:var(--paper);border:.28cqw solid var(--ink);border-radius:50%;
+  padding:2cqw 2.4cqw;text-align:center;font-family:var(--display);font-size:3cqw;line-height:1;
+  box-shadow:.5cqw .5cqw 0 var(--ink);
+}
+.bubble::after{
+  content:"";position:absolute;width:3cqw;height:3cqw;background:var(--paper);
+  border-right:.28cqw solid var(--ink);border-bottom:.28cqw solid var(--ink);
+  left:var(--tx,20%);bottom:-1.4cqw;transform:skew(20deg) rotate(45deg);
+}
+
+.badges{display:flex;gap:1cqw}
+.badge{
+  flex:1;background:var(--paper);border:.28cqw solid var(--ink);box-shadow:.45cqw .45cqw 0 var(--ink);
+  text-align:center;font-family:var(--display);font-size:2.1cqw;line-height:1;padding:.8cqw .5cqw .6cqw;
+}
+.badge i{display:block;font-style:normal;font-size:2.8cqw;color:var(--red);margin-bottom:.2cqw}
+
+.charges{background:var(--paper);border:.28cqw solid var(--ink);box-shadow:.55cqw .55cqw 0 var(--ink);padding:1cqw 1.2cqw;transform:rotate(-1.5deg)}
+.charges h3{font-family:var(--display);font-weight:400;font-size:2.4cqw;color:var(--red);letter-spacing:.04em}
+.charges li{list-style:none;font-family:var(--display);font-size:2.2cqw;line-height:1.15}
+.charges li::before{content:"✗ ";color:var(--red)}
+
+.arrow{position:absolute;width:0;height:0;border-left:1.1cqw solid transparent;border-right:1.1cqw solid transparent;border-top:1.8cqw solid var(--ink);left:1.2cqw;bottom:-1.9cqw}
+.arrow.left{border:0;border-top:1.1cqw solid transparent;border-bottom:1.1cqw solid transparent;border-right:1.8cqw solid var(--ink);left:-1.95cqw;top:1.2cqw;bottom:auto}
+.bubble.notail::after{display:none}
+.arrow.up{border-top:0;border-bottom:1.8cqw solid var(--ink);top:-1.9cqw;bottom:auto}
+
+/* ---------- SLIDE CONTROLS ---------- */
+.home-btn{
+  position:absolute;top:.8cqw;right:.8cqw;width:9.5cqw;aspect-ratio:1;z-index:20;
+  filter:drop-shadow(.35cqw .35cqw 0 #000);transition:transform .12s ease;
+}
+.home-btn:hover{transform:rotate(-8deg) scale(1.08)}
+.home-btn:active{transform:scale(.92)}
+.home-btn svg{width:100%;height:100%;display:block}
+.controls{
+  position:absolute;right:.8cqw;bottom:.8cqw;z-index:20;display:flex;gap:.5cqw;align-items:center;
+  opacity:.35;transition:opacity .25s;
+}
+.controls:hover,.controls:focus-within,.awake .controls{opacity:1}
+.ctl{
+  background:var(--paper);border:.22cqw solid var(--ink);box-shadow:.3cqw .3cqw 0 var(--ink);
+  font-family:var(--display);font-size:1.7cqw;line-height:1;padding:.45cqw .8cqw .25cqw;min-width:3.4cqw;
+}
+.ctl:active{transform:translate(.2cqw,.2cqw);box-shadow:none}
+.ctl.on{background:var(--yellow)}
+.dots{display:flex;gap:.35cqw;padding:0 .4cqw}
+.dots span{width:.9cqw;height:.9cqw;border-radius:50%;border:.18cqw solid var(--ink);background:#fff}
+.dots span.lit{background:var(--red)}
+
+/* ---------- BONUS SLIDES ---------- */
+.bonus-bg{position:absolute;inset:0}
+.bonus-bg.red{background:repeating-conic-gradient(from 0deg at 50% 45%, #ff4a52 0 7deg, var(--red) 7deg 18deg)}
+.bonus-bg.cyan{background:repeating-conic-gradient(from 0deg at 50% 45%, #5cc2f0 0 7deg, var(--cyan) 7deg 18deg)}
+.mv-card{
+  position:absolute;left:7%;right:7%;top:22%;background:var(--paper);border:.35cqw solid var(--ink);
+  box-shadow:.8cqw .8cqw 0 var(--ink);padding:2.5cqw 3cqw 2cqw;
+}
+.mv-words{font-size:3.3cqw;line-height:1.45;font-family:var(--body)}
+.mv-words .w{display:inline-block;border-bottom:.3cqw solid transparent;transition:color .2s}
+.mv-words .w.gone{color:transparent;border-bottom-color:var(--ink)}
+.mv-ref{font-family:var(--display);font-size:3cqw;color:var(--red);margin-top:1cqw}
+.mv-tools{display:flex;gap:1cqw;margin-top:1.2cqw}
+.mv-tools .ctl{font-size:2cqw;padding:.6cqw 1.2cqw .35cqw}
+
+.qgrid{position:absolute;left:3%;right:3%;top:17%;bottom:4%;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,1fr);gap:1.4cqw}
+.q{
+  background:var(--paper);border:.3cqw solid var(--ink);box-shadow:.55cqw .55cqw 0 var(--ink);
+  text-align:left;padding:1.3cqw 1.5cqw;display:flex;flex-direction:column;justify-content:flex-start;gap:.7cqw;
+}
+.q b{font-family:var(--display);font-weight:400;font-size:2.2cqw;line-height:1.05;letter-spacing:.02em}
+.q b em{font-style:normal;color:var(--red)}
+.q span{font-size:1.6cqw;line-height:1.25;color:var(--royal);visibility:hidden}
+.q.open span{visibility:visible}
+.q.open{background:#FFF7C2}
+
+@media (prefers-reduced-motion:reduce){
+  .slide.active .art{animation:none}
+  .el,.panel,.home-btn{transition:none}
+}
+/* Phones / narrow screens: let the home grid scroll */
+@media (max-width:760px), (max-height:480px){
+  html,body{overflow:auto}
+  #home{position:static;min-height:100%}
+  .masthead{grid-template-columns:1fr}
+  .issue{display:none}
+  .mast-tools{flex-direction:row;justify-content:center}
+  .grid{grid-template-columns:repeat(2,1fr);grid-template-rows:none;grid-auto-rows:34vw}
+}
+</style>
+</head>
+<body>
+
+<main id="home" aria-label="Lesson home">
+  <header class="masthead">
+    <div class="issue" aria-hidden="true"><span>Lesson</span><b>#29</b><span>Acts 6–7</span></div>
+    <div class="mast-title">
+      <h1>The Jews Resist the Holy Spirit</h1>
+      <p>The story of Stephen · Acts 6:1–7:60 · Memory verse: Acts 7:51</p>
+    </div>
+    <div class="mast-tools">
+      <button class="chip" id="startBtn">Start at panel 1</button>
+      <button class="chip" id="fsBtn">Full screen</button>
+    </div>
+  </header>
+  <nav class="grid" id="grid" aria-label="Slides"></nav>
+  <footer class="home-foot">
+    Keys: ← → or clicker to move · H or Esc for home · T hides text · F full screen.
+    Scripture quotations are from the ESV® Bible (The Holy Bible, English Standard Version®), © 2001 by Crossway, a publishing ministry of Good News Publishers. Used by permission. All rights reserved.
+  </footer>
+</main>
+
+<section id="viewer" aria-live="polite">
+  <div class="stage" id="stage">
+    <div id="slides"></div>
+    <button class="home-btn" id="homeBtn" aria-label="Back to home">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <polygon fill="#E3262E" stroke="#000" stroke-width="3.5" stroke-linejoin="round"
+          points="50,2 59,22 79,10 75,32 97,32 81,47 97,62 75,65 81,88 60,77 50,98 40,77 19,88 25,65 3,62 19,47 3,32 25,32 21,10 41,22"/>
+        <text x="50" y="59" text-anchor="middle" font-family="Bangers, Impact, sans-serif" font-size="25" fill="#FFD83D" stroke="#000" stroke-width="2.4" paint-order="stroke" letter-spacing="1">HOME</text>
+      </svg>
+    </button>
+    <div class="controls" id="controls">
+      <button class="ctl" id="prevBtn" aria-label="Previous">◀</button>
+      <div class="dots" id="dots" aria-hidden="true"></div>
+      <button class="ctl" id="nextBtn" aria-label="Next">▶</button>
+      <button class="ctl" id="textBtn" aria-label="Hide or show text" title="Hide/show text (T)">Text</button>
+    </div>
+  </div>
+</section>
+
+<script>
+/* =========================================================
+   SLIDE CONTENT
+   Each element: [step, css-position, html]
+   step 0 = shows immediately; 1,2,3… = revealed by each click/→
+   Positions are % of the 16:9 picture, so they line up with the art.
+   ========================================================= */
+const V = (ref, text, cls='') => `<div class="verse ${cls}"><span class="ref">${ref}</span>${text}</div>`;
+
+const SLIDES = [
+ { title:"The Jews Resist the Holy Spirit", img:"img/slide-01.webp", thumb:"img/thumb-01.webp",
+   zoom:{s:1.45, x:"42%", y:"45%"},
+   els:[
+    [0,"right:12%;top:4%;width:44%", `<div class="cap huge"><h2>The Jews Resist the Holy Spirit</h2><div class="sub">Acts 6:1–7:60</div></div>`],
+    [1,"left:4%;top:5%;width:20%", `<div class="bubble notail">Why is this man smiling?</div>`],
+    [2,"left:56%;top:45%", `<div class="tag"><span class="arrow left"></span>This is Stephen<small>Not Jesus! Stephen was a follower of Jesus.</small></div>`],
+    [3,"left:3%;bottom:4%;width:40%", V("Memory verse · Acts 7:51","“You stiff-necked people, uncircumcised in heart and ears, you always resist the Holy Spirit. As your fathers did, so do you.”","small")]
+   ]},
+ { title:"The Big Idea", img:"img/slide-02.webp", thumb:"img/thumb-02.webp",
+   els:[
+    [0,"left:2%;top:3%", `<div class="cap"><h2>The Big Idea</h2></div>`],
+    [1,"left:50%;top:49%;width:46%", `<div class="point big">The Holy Spirit gives faithful believers the ability to honor Jesus.</div>`],
+    [2,"left:50%;bottom:4%;width:37%", V("Acts 1:8","“But you will receive power when the Holy Spirit has come upon you, and you will be my witnesses…”","small")]
+   ]},
+ { title:"A Problem in the Church", img:"img/slide-03.webp", thumb:"img/thumb-03.webp",
+   els:[
+    [0,"left:2%;top:3%", `<div class="cap"><h2>A Problem in the Church</h2></div>`],
+    [1,"left:2%;top:17%;width:40%", `<div class="point">Thousands of new believers! The apostles couldn’t do everything themselves.</div>`],
+    [2,"right:14%;bottom:4%;width:46%", V("Acts 6:1","“Now in these days when the disciples were increasing in number, a complaint by the Hellenists arose against the Hebrews because their widows were being neglected in the daily distribution.”","small")]
+   ]},
+ { title:"Stephen: A Spirit-Filled Servant", img:"img/slide-04.webp", thumb:"img/thumb-04.webp",
+   els:[
+    [0,"left:55%;top:3%;width:33%", `<div class="cap"><h2>Stephen: A Spirit‑Filled Servant</h2></div>`],
+    [1,"left:2%;bottom:4%;width:45%", V("Acts 6:3","“Therefore, brothers, pick out from among you seven men of good repute, full of the Spirit and of wisdom, whom we will appoint to this duty.”","small")],
+    [2,"left:49%;bottom:4%;width:32%", `<div class="badges"><div class="badge"><i>★</i>Good<br>reputation</div><div class="badge"><i>🔥</i>Full of<br>the Spirit</div><div class="badge"><i>💡</i>Full of<br>wisdom</div></div>`]
+   ]},
+ { title:"Stephen Couldn’t Be Answered", img:"img/slide-05.webp", thumb:"img/thumb-05.webp",
+   els:[
+    [0,"left:64%;top:3%;width:23%", `<div class="cap"><h2>Stephen Couldn’t Be Answered</h2></div>`],
+    [1,"left:2%;bottom:4%;width:38%", V("Acts 6:10","“But they could not withstand the wisdom and the Spirit with which he was speaking.”")],
+    [2,"left:60%;bottom:4%;width:26%", `<div class="point">The Holy Spirit gave Stephen <b>wisdom</b> and <b>boldness</b>.</div>`]
+   ]},
+ { title:"False Accusations", img:"img/slide-06.webp", thumb:"img/thumb-06.webp",
+   els:[
+    [0,"left:31%;top:3%", `<div class="cap"><h2>False Accusations</h2><div class="sub">On trial before the Sanhedrin (their supreme court)</div></div>`],
+    [1,"left:2%;bottom:5%;width:28%", `<div class="charges"><h3>The charges</h3><ul><li>Against the temple</li><li>Against the Law of Moses</li></ul></div>`],
+    [2,"left:36%;bottom:4%;width:40%", V("Acts 6:13","“…they set up false witnesses who said, ‘This man never ceases to speak words against this holy place and the law…’”","small")],
+    [3,"left:2%;top:3%;width:21%", `<div class="tag" style="transform:rotate(2deg)">Look at his face!<small>“…his face was like the face of an angel.” (Acts 6:15)</small></div>`]
+   ]},
+ { title:"Stephen’s History Lesson", img:"img/slide-07.webp", thumb:"img/thumb-07.webp",
+   els:[
+    [0,"left:2%;bottom:4%;width:30%", `<div class="cap"><h2>Stephen’s History Lesson</h2><div class="sub">God was never trapped in one place, and Israel kept resisting Him.</div></div>`],
+    [1,"left:2%;top:31%", `<div class="tag">Abraham<small>God met him in faraway Mesopotamia (7:2)</small></div>`],
+    [2,"left:57%;top:31%", `<div class="tag">Joseph<small>God was with him in Egypt (7:9)</small></div>`],
+    [3,"left:66%;top:2%", `<div class="tag" style="transform:rotate(2deg)">Moses<small>God did wonders at the Red Sea (7:36)</small></div>`],
+    [4,"left:66%;bottom:4%;width:30%", V("Acts 7:48","“Yet the Most High does not dwell in houses made by hands…”")]
+   ]},
+ { title:"Joseph and Moses Point to Jesus", img:"img/slide-08.webp", thumb:"img/thumb-08.webp",
+   els:[
+    [0,"left:1%;bottom:3%;width:30%", `<div class="cap"><h2>Joseph &amp; Moses Point to Jesus</h2></div>`],
+    [1,"left:2%;top:36%;width:27%", `<div class="tag" style="transform:rotate(-2deg)">1. Joseph<small>“The patriarchs, jealous of Joseph, sold him into Egypt; but God was with him” (7:9)</small></div>`],
+    [2,"left:57%;top:36%;width:23%", `<div class="tag" style="transform:rotate(2deg)">2. Moses<small>“This Moses, whom they rejected… God sent as both ruler and redeemer” (7:35)</small></div>`],
+    [3,"left:33%;bottom:3%;width:34%", V("3. Jesus · Acts 7:52","“…the Righteous One, whom you have now betrayed and murdered”")]
+   ]},
+ { title:"Resisting the Holy Spirit", img:"img/slide-09.webp", thumb:"img/thumb-09.webp",
+   els:[
+    [0,"left:36%;top:2%", `<div class="cap"><h2>Resisting the Holy Spirit</h2></div>`],
+    [1,"left:2%;bottom:4%;width:34%", `<div class="point"><b style="font-family:var(--display);font-size:2.6cqw;font-weight:400;letter-spacing:.03em">“Stiff-necked” =</b><br>stubbornly refusing to bow to God, like a dog that locks its legs and won’t follow the leash.</div>`],
+    [2,"left:40%;bottom:4%;width:45%", V("Acts 7:51","“You stiff-necked people, uncircumcised in heart and ears, you always resist the Holy Spirit. As your fathers did, so do you.”")],
+    [3,"left:3%;top:1%;width:26%", `<div class="bubble" style="--tx:78%;font-size:2.1cqw;padding:1.2cqw 2cqw">They “stopped their ears” (Acts 7:57)</div>`]
+   ]},
+ { title:"Stephen Sees Jesus", img:"img/slide-01.webp", thumb:"img/thumb-10.webp",
+   els:[
+    [0,"left:36%;top:2%", `<div class="cap"><h2>Stephen Sees Jesus</h2></div>`],
+    [1,"left:55%;top:16%;width:33%", V("Acts 7:55–56","“But he, full of the Holy Spirit, gazed into heaven and saw the glory of God, and Jesus standing at the right hand of God.”","small")],
+    [2,"left:2%;bottom:4%;width:34%", V("Acts 7:59–60","“Lord Jesus, receive my spirit… Lord, do not hold this sin against them.” And when he had said this, he fell asleep.","small")],
+    [3,"left:76%;top:40%;width:22%", `<div class="tag" style="transform:rotate(3deg)">Meet Saul!<small>“The witnesses laid down their garments at the feet of a young man named Saul.” (7:58)</small><span class="arrow" style="left:auto;right:3cqw"></span></div>`],
+    [4,"left:39%;bottom:4%;width:34%", `<div class="point">God answered Stephen’s prayer: Saul became Paul, who spread the gospel all the way to Rome.</div>`]
+   ]},
+ { title:"Memory Verse Challenge", bonus:"red", big:"Memory<br>Verse<br>Challenge", custom:"memory" },
+ { title:"Rapid-Fire Review", bonus:"cyan", big:"Rapid-Fire<br>Review", custom:"review" }
+];
+
+const MEMORY = "You stiff-necked people, uncircumcised in heart and ears, you always resist the Holy Spirit. As your fathers did, so do you.";
+const REVIEW = [
+  ["What does it mean to be <em>full of the Spirit</em>?","Depending on the Spirit’s power and obeying the Spirit’s will."],
+  ["Name <em>three qualities</em> of Stephen.","Good reputation, full of the Spirit, full of wisdom (also faith, grace, and power)."],
+  ["What did the leaders <em>accuse</em> Stephen of?","Blasphemy: speaking against the temple and the Law of Moses."],
+  ["How were Joseph and Moses <em>like Jesus</em>?","Each was sent by God to save Israel, and each was rejected by his own people."],
+  ["What did Stephen <em>see</em> before he died?","Jesus standing at the right hand of God in heaven."],
+  ["How did God <em>answer</em> Stephen’s prayer?","He saved Saul, who became Paul and spread the gospel all the way to Rome."]
+];
+
+/* ========================================================= */
+const $ = s => document.querySelector(s);
+const grid = $('#grid'), slidesEl = $('#slides'), viewer = $('#viewer'), stage = $('#stage');
+let cur = -1, step = 0, textOn = true;
+const maxStep = i => (SLIDES[i].els||[]).reduce((m,e)=>Math.max(m,e[0]),0);
+
+// Build home panels
+SLIDES.forEach((s,i)=>{
+  const b = document.createElement('button');
+  b.className = 'panel' + (s.bonus ? ' bonus' + (s.bonus==='cyan'?' cyan':'') : '');
+  b.innerHTML = s.bonus
+    ? `<div class="big">${s.big}</div><span class="label">Bonus round</span>`
+    : `<img src="${s.thumb}" alt="" loading="eager"><span class="num">${i+1}</span><span class="label">${s.title}</span>`;
+  b.addEventListener('click',()=>go(i,0));
+  grid.appendChild(b);
+});
+
+// Build slides
+SLIDES.forEach((s,i)=>{
+  const d = document.createElement('div');
+  d.className = 'slide'; d.dataset.i = i;
+  if (s.custom === 'memory') {
+    d.innerHTML = `<div class="bonus-bg red"></div>
+      <div class="el" style="left:2%;top:3%"><div class="cap"><h2>Memory Verse Challenge</h2><div class="sub">Say it together. Each click erases more words. Can you still say it?</div></div></div>
+      <div class="mv-card"><div class="mv-words" id="mvWords"></div><div class="mv-ref">Acts 7:51</div>
+      <div class="mv-tools"><button class="ctl" id="mvHide">Erase words</button><button class="ctl" id="mvReset">Start over</button></div></div>`;
+  } else if (s.custom === 'review') {
+    d.innerHTML = `<div class="bonus-bg cyan"></div>
+      <div class="el" style="left:2%;top:3%"><div class="cap"><h2>Rapid-Fire Review</h2><div class="sub">Tap a question to reveal the answer.</div></div></div>
+      <div class="qgrid">${REVIEW.map(q=>`<button class="q"><b>${q[0]}</b><span>${q[1]}</span></button>`).join('')}</div>`;
+  } else {
+    const z = s.zoom ? `--s:${s.zoom.s};--ox:${s.zoom.x};--oy:${s.zoom.y};transform:scale(${s.zoom.s})` : '';
+    d.innerHTML = `<img class="art" src="${s.img}" alt="${s.title}" style="${z}">` +
+      s.els.map(([st,pos,html])=>`<div class="el" data-step="${st}" style="${pos}">${html}</div>`).join('');
+  }
+  slidesEl.appendChild(d);
+});
+
+// Memory verse game
+const words = MEMORY.split(' ');
+const mv = $('#mvWords');
+mv.innerHTML = words.map(w=>`<span class="w">${w}</span>`).join(' ');
+const mvSpans = [...mv.querySelectorAll('.w')];
+$('#mvHide').addEventListener('click', e=>{
+  e.stopPropagation();
+  const left = mvSpans.filter(s=>!s.classList.contains('gone'));
+  for (let k=0;k<3 && left.length;k++) left.splice(Math.floor(Math.random()*left.length),1)[0].classList.add('gone');
+});
+$('#mvReset').addEventListener('click', e=>{ e.stopPropagation(); mvSpans.forEach(s=>s.classList.remove('gone')); });
+mvSpans.forEach(s=>s.addEventListener('click',e=>{e.stopPropagation();s.classList.toggle('gone')}));
+document.querySelectorAll('.q').forEach(q=>q.addEventListener('click',e=>{e.stopPropagation();q.classList.toggle('open')}));
+
+function render(){
+  document.querySelectorAll('.slide').forEach(d=>d.classList.toggle('active', +d.dataset.i===cur));
+  const act = document.querySelector('.slide.active');
+  act && act.querySelectorAll('.el[data-step]').forEach(e=>e.classList.toggle('hidden', +e.dataset.step > step));
+  const m = maxStep(cur);
+  $('#dots').innerHTML = m ? Array.from({length:m+1},(_,k)=>`<span class="${k<=step?'lit':''}"></span>`).join('') : '';
+}
+function go(i, s=0){
+  if (i<0 || i>=SLIDES.length) return;
+  cur = i; step = s==='end' ? maxStep(i) : s;
+  viewer.classList.add('on'); $('#home').style.display='none';
+  if (location.hash !== '#'+(i+1)) history.replaceState(null,'','#'+(i+1));
+  render(); wake();
+}
+function home(){
+  cur=-1; viewer.classList.remove('on'); $('#home').style.display='';
+  history.replaceState(null,'','#home');
+}
+function next(){ if (cur<0) return go(0); if (step<maxStep(cur)) {step++; render();} else if (cur<SLIDES.length-1) go(cur+1,0); }
+function prev(){ if (cur<0) return; if (step>0) {step--; render();} else if (cur>0) go(cur-1,'end'); }
+function toggleText(){ textOn=!textOn; stage.classList.toggle('textoff',!textOn); $('#textBtn').classList.toggle('on',!textOn); }
+function fullscreen(){ const d=document.documentElement; if(!document.fullscreenElement) d.requestFullscreen?.(); else document.exitFullscreen?.(); }
+
+$('#homeBtn').addEventListener('click',e=>{e.stopPropagation();home()});
+$('#nextBtn').addEventListener('click',e=>{e.stopPropagation();next()});
+$('#prevBtn').addEventListener('click',e=>{e.stopPropagation();prev()});
+$('#textBtn').addEventListener('click',e=>{e.stopPropagation();toggleText()});
+$('#startBtn').addEventListener('click',()=>go(0));
+$('#fsBtn').addEventListener('click',fullscreen);
+stage.addEventListener('click',e=>{ if(!SLIDES[cur]?.custom) next(); }); // click the picture to advance
+
+document.addEventListener('keydown',e=>{
+  const k=e.key;
+  if (cur<0 && (k===' '||k==='Enter')) return;
+  if (['ArrowRight','PageDown',' ','Enter'].includes(k)) { e.preventDefault(); next(); }
+  else if (['ArrowLeft','PageUp','Backspace'].includes(k)) { e.preventDefault(); prev(); }
+  else if (k==='Escape'||k==='h'||k==='H'||k==='Home') home();
+  else if (k==='t'||k==='T'||k==='b'||k==='B'||k==='.') toggleText();   // many clickers send B or . for "blank"
+  else if (k==='f'||k==='F') fullscreen();
+});
+
+// Show controls briefly when the mouse moves
+let wakeT; function wake(){ stage.classList.add('awake'); clearTimeout(wakeT); wakeT=setTimeout(()=>stage.classList.remove('awake'),2200); }
+stage.addEventListener('mousemove',wake);
+
+// Preload full-size art so slides pop instantly
+window.addEventListener('load',()=>SLIDES.forEach(s=>{ if(s.img){ const im=new Image(); im.src=s.img; }}));
+
+// Deep links: #3 opens slide 3
+function fromHash(){ const n=parseInt(location.hash.slice(1),10); if(n>=1&&n<=SLIDES.length) go(n-1,0); else home(); }
+window.addEventListener('hashchange',fromHash); fromHash();
+</script>
+</body>
+</html>
